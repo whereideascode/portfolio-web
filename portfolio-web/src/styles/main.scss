@@ -39,7 +39,10 @@ main {
   padding: 0;
   border: 0;
 
+  overflow: visible;
   cursor: pointer;
+
+  perspective: 800px;
 }
 
 .envelope__back {
@@ -63,14 +66,23 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+    
+  z-index: 2;
+  transition: transform 500ms ease 350ms;
+}
+
+.envelope:hover .envelope__letter, 
+.envelope:focus-visible .envelope__letter {
+    transform: translateY(-35px);
 }
 
 .envelope__back {
-  z-index: 1;
-}
+  position: absolute;
+  inset: 0;
 
-.envelope__letter {
-  z-index: 2;
+  background-color: #d9d9d9;
+
+  z-index: 1;
 }
 
 .envelope__front {
@@ -79,5 +91,38 @@ main {
 
   background-color: #bcbcbc;
 
+  clip-path: polygon(
+    0 0%,
+    50% 40%,
+    100% 0%,
+    100% 100%,
+    0 100%
+  );
+
   z-index: 3;
+}
+
+.envelope__flap {
+  position: absolute;
+
+  inset: 0;
+
+  background-color: #c9c9c9;
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    50% 50%
+  );
+
+  z-index: 4;
+
+  transform-origin: top;
+  transition: transform 600ms ease;
+}
+
+.envelope:hover .envelope__flap,
+.envelope:focus-visible .envelope__flap {
+    z-index: 1;
+  transform: rotateX(180deg);
 }
