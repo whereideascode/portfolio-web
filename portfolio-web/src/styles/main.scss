@@ -29,3 +29,55 @@ main {
 .panel--active {
   display: block;
 }
+
+.envelope {
+  position: relative;
+
+  width: 220px;
+  height: 140px;
+
+  padding: 0;
+  border: 0;
+
+  cursor: pointer;
+}
+
+.envelope__back {
+  position: absolute;
+  inset: 0;
+
+  background-color: #d9d9d9;
+}
+
+.envelope__letter {
+  position: absolute;
+
+  left: 10%;
+  bottom: 10px;
+
+  width: 80%;
+  height: 110px;
+
+  background-color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.envelope__back {
+  z-index: 1;
+}
+
+.envelope__letter {
+  z-index: 2;
+}
+
+.envelope__front {
+  position: absolute;
+  inset: 0;
+
+  background-color: #bcbcbc;
+
+  z-index: 3;
+}
