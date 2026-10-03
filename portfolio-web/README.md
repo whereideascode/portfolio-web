@@ -2,43 +2,58 @@
 
 Portfolio personal desarrollado como parte de mi formación como desarrolladora Full Stack.
 
-El proyecto tiene como objetivo presentar mi perfil profesional, las tecnologías con las que trabajo, mis proyectos y mis objetivos dentro del desarrollo web.
+El proyecto tiene como objetivo presentar de forma clara y visual mi perfil profesional, las tecnologías con las que trabajo, mis proyectos y mis objetivos dentro del desarrollo web.
 
 Actualmente se encuentra **en desarrollo**.
 
 ## 👩‍💻 Sobre el proyecto
 
-Este portfolio está siendo desarrollado desde cero como proyecto práctico para aplicar y consolidar conocimientos de desarrollo frontend.
+Este portfolio está siendo desarrollado desde cero como proyecto práctico para aplicar y consolidar conocimientos de desarrollo frontend, diseño responsive, accesibilidad y experiencia de usuario.
 
-La interfaz estará basada en una navegación interactiva mediante tres sobres:
+La interfaz estará organizada en tres áreas principales:
 
-* **Sobre mí**
-* **Proyectos**
-* **Objetivos**
+* **01 — About**
+* **02 — Projects**
+* **03 — Goals**
 
-La intención es crear una experiencia sencilla, visual e intuitiva, manteniendo buenas prácticas de UX, accesibilidad y diseño responsive.
+El objetivo es que una persona que visite el portfolio pueda identificar rápidamente quién soy, qué estoy aprendiendo, qué tecnologías utilizo y qué proyectos estoy desarrollando.
+
+La interfaz principal estará en inglés para facilitar la comprensión del portfolio a visitantes internacionales.
 
 ## 📂 Estructura actual
 
 El portfolio cuenta actualmente con una estructura HTML semántica formada por:
 
-* `header` con nombre, perfil profesional y enlace a GitHub.
-* `main` con la navegación principal.
-* Sección **Sobre mí**.
+* `header`
+
+  * Nombre.
+  * Perfil profesional.
+  * Enlace a GitHub.
+
+* `main`
+
+  * Navegación principal.
+
+* **About**
 
   * Presentación.
   * Formación.
   * Stack actual.
-* Sección **Proyectos**.
+
+* **Projects**
 
   * Tarot App.
   * Portfolio profesional.
   * Trabajos realizados durante mi formación.
-* Sección **Objetivos**.
+
+* **Goals**
 
   * Objetivo profesional.
   * Oportunidades que busco.
-* `footer`.
+
+* `footer`
+
+La estructura se irá adaptando durante el desarrollo para implementar el nuevo sistema de paneles interactivos.
 
 ## 🛠️ Tecnologías
 
@@ -55,17 +70,49 @@ El proyecto utiliza **JavaScript vanilla**, sin frameworks frontend.
 
 ## 🎨 Diseño previsto
 
-El portfolio estará diseñado como una experiencia de una sola pantalla en escritorio.
+El portfolio utilizará una interfaz basada en tres paneles numerados:
 
-La navegación principal estará representada mediante tres sobres interactivos. Al interactuar con cada uno se mostrará el contenido correspondiente.
+* `01 — About`
+* `02 — Projects`
+* `03 — Goals`
 
-La interacción se diseñará teniendo en cuenta distintos dispositivos:
+Los tres apartados estarán visibles desde la interfaz principal para que el visitante pueda comprender la estructura del portfolio de un vistazo.
 
-* **Escritorio:** interacción mediante hover y clic.
-* **Dispositivos táctiles:** interacción mediante tap.
-* **Teclado:** navegación accesible mediante controles interactivos.
+El diseño seguirá un enfoque **mobile first** y adaptará su composición al espacio disponible.
 
-El diseño será responsive para adaptarse a diferentes tamaños de pantalla.
+### Desktop
+
+Los tres paneles se mostrarán horizontalmente.
+
+Al seleccionar uno de ellos, el panel activo podrá expandirse mientras los demás se contraen, manteniendo visible la navegación y el contexto de la página.
+
+El `hover` se utilizará únicamente como microinteracción visual y no será necesario para acceder al contenido.
+
+### Tablet
+
+La interfaz conservará la identidad visual de los tres paneles, pero reducirá y reorganizará la información según el espacio disponible.
+
+Al abrir una sección, el contenido tendrá mayor protagonismo y la navegación hacia las demás secciones continuará accesible.
+
+### Mobile
+
+Los paneles se organizarán verticalmente y podrán recorrerse mediante scroll.
+
+La interacción principal se realizará mediante `tap`, permitiendo expandir cada sección para consultar su contenido.
+
+El diseño móvil no dependerá de interacciones `hover`.
+
+## ♿ UX y accesibilidad
+
+El portfolio se desarrollará teniendo en cuenta diferentes formas de interacción:
+
+* **Ratón:** clic y microinteracciones mediante hover.
+* **Pantallas táctiles:** interacción mediante tap.
+* **Teclado:** navegación mediante controles interactivos y estados de foco visibles.
+
+Las animaciones tendrán una función visual y de orientación, pero no serán necesarias para comprender o utilizar la página.
+
+Los breakpoints responsive se definirán según las necesidades reales del contenido y no exclusivamente según dispositivos concretos.
 
 ## 📌 Estado del proyecto
 
@@ -74,25 +121,32 @@ El diseño será responsive para adaptarse a diferentes tamaños de pantalla.
 Actualmente se ha completado:
 
 * Configuración inicial del proyecto con Vite.
-* Eliminación de React para trabajar inicialmente con JavaScript vanilla.
+* Eliminación de React para trabajar con JavaScript vanilla.
 * Estructura semántica inicial en HTML.
 * Navegación básica del portfolio.
-* Enlace al perfil profesional de GitHub.
-* Configuración inicial de Sass / SCSS.
-* Hoja de estilos principal.
+* Enlace al perfil de GitHub.
+* Configuración de Sass / SCSS.
 * Integración de SCSS con Vite.
+* Definición inicial de las tres áreas principales del portfolio.
+* Diseño conceptual del nuevo sistema de paneles.
+* Wireframe responsive para desktop, tablet y mobile.
 
-Las animaciones, el diseño visual de los sobres y la lógica de interacción se desarrollarán en las siguientes fases.
+Durante una fase experimental se exploró una navegación mediante sobres interactivos. Esta propuesta se descartó posteriormente para priorizar una interfaz más clara, accesible y adaptable a diferentes tamaños de pantalla.
 
 ## 🚀 Próximas fases
 
-* Crear el layout principal.
-* Diseñar los sobres con SCSS.
-* Implementar las interacciones con JavaScript.
-* Incorporar el contenido completo de cada sección.
-* Adaptar la interfaz a dispositivos móviles.
-* Mejorar accesibilidad y navegación mediante teclado.
-* Añadir los proyectos y recursos visuales.
+* Definir la identidad visual del portfolio.
+* Elegir tipografía, paleta de color y estilo gráfico.
+* Adaptar la estructura HTML al sistema `About / Projects / Goals`.
+* Construir el layout siguiendo un enfoque mobile first.
+* Desarrollar la adaptación para tablet.
+* Desarrollar la composición de tres paneles para desktop.
+* Implementar la apertura y cierre de paneles con JavaScript.
+* Añadir transiciones y microinteracciones.
+* Incorporar el contenido definitivo de cada sección.
+* Mejorar la accesibilidad y navegación mediante teclado.
+* Añadir recursos visuales a los proyectos.
+* Realizar pruebas responsive.
 * Optimizar el portfolio para producción.
 * Publicar la versión online.
 
@@ -100,6 +154,6 @@ Las animaciones, el diseño visual de los sobres y la lógica de interacción se
 
 **Carolina Ekombo**
 
-Desarrolladora Full Stack en formación.
+Full Stack Developer in training.
 
 GitHub: `whereideascode`
