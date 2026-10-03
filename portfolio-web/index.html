@@ -1,69 +1,115 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-    <title>Carolina Ekombo | Desarrolladora Web</title>
+    <title>Carolina Ekombo | Full Stack Developer</title>
   </head>
 
   <body>
 
-    <header>
-      <h1>Carolina Ekombo</h1>
-      <p>Desarrolladora Full Stack en formación</p>
+    <header class="site-header">
+      <div class="site-header__identity">
+        <h1>Carolina Ekombo</h1>
+        <p>Full Stack Developer · In Training</p>
+      </div>
 
-      <a href="https://github.com/whereideascode" target="_blank" rel="noopener noreferrer">
-        GitHub · whereideascode
+      <a
+        class="site-header__github"
+        href="https://github.com/whereideascode"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub · whereideascode ↗
       </a>
     </header>
 
     <main>
 
-      <nav aria-label="Secciones principales del portfolio">
-        <ul>
-          <li>
-            <button type="button" aria-controls="sobre-mi">
-              Sobre mí
+      <nav class="portfolio-nav" aria-label="Portfolio sections">
+        <ul class="portfolio-nav__list">
+
+          <li class="portfolio-nav__item">
+            <button
+              class="nav-panel nav-panel--about"
+              type="button"
+              aria-controls="about"
+              aria-expanded="false"
+            >
+              <span class="nav-panel__number">01</span>
+
+              <span class="nav-panel__title">About</span>
+
+              <span class="nav-panel__summary">
+                Who I am · Education · Tech stack
+              </span>
+
+              <span class="nav-panel__arrow" aria-hidden="true">↗</span>
             </button>
           </li>
 
-          <li>
-            <button type="button" aria-controls="proyectos">
-              Proyectos
+          <li class="portfolio-nav__item">
+            <button
+              class="nav-panel nav-panel--projects"
+              type="button"
+              aria-controls="projects"
+              aria-expanded="false"
+            >
+              <span class="nav-panel__number">02</span>
+
+              <span class="nav-panel__title">Projects</span>
+
+              <span class="nav-panel__summary">
+                Tarot App · Portfolio · Training work
+              </span>
+
+              <span class="nav-panel__arrow" aria-hidden="true">↗</span>
             </button>
           </li>
 
-          <li>
-            <button type="button" aria-controls="objetivos">
-              Objetivos
+          <li class="portfolio-nav__item">
+            <button
+              class="nav-panel nav-panel--goals"
+              type="button"
+              aria-controls="goals"
+              aria-expanded="false"
+            >
+              <span class="nav-panel__number">03</span>
+
+              <span class="nav-panel__title">Goals</span>
+
+              <span class="nav-panel__summary">
+                Career direction · Opportunities
+              </span>
+
+              <span class="nav-panel__arrow" aria-hidden="true">↗</span>
             </button>
           </li>
+
         </ul>
       </nav>
 
-
-      <section id="sobre-mi" class="panel">
-        <h2>Sobre mí</h2>
+      <section id="about" class="panel" aria-labelledby="about-title">
+        <h2 id="about-title">About</h2>
 
         <section>
-          <h3>Presentación</h3>
+          <h3>Who I am</h3>
         </section>
 
         <section>
-          <h3>Formación</h3>
+          <h3>Education</h3>
         </section>
 
         <section>
-          <h3>Stack actual</h3>
+          <h3>Tech stack</h3>
         </section>
       </section>
 
-
-      <section id="proyectos" class="panel">
-        <h2>Proyectos</h2>
+      <section id="projects" class="panel" aria-labelledby="projects-title">
+        <h2 id="projects-title">Projects</h2>
 
         <article>
           <h3>Tarot App</h3>
@@ -74,26 +120,25 @@
         </article>
 
         <article>
-          <h3>Trabajos Bootcampcode</h3>
+          <h3>Training Work</h3>
         </article>
       </section>
 
-
-      <section id="objetivos" class="panel">
-        <h2>Objetivos</h2>
+      <section id="goals" class="panel" aria-labelledby="goals-title">
+        <h2 id="goals-title">Goals</h2>
 
         <section>
-          <h3>Objetivo profesional</h3>
+          <h3>Career Direction</h3>
         </section>
 
         <section>
-          <h3>Qué oportunidades busco</h3>
+          <h3>Opportunities</h3>
         </section>
       </section>
 
     </main>
 
-    <footer>
+    <footer class="site-footer">
       <p>&copy; 2026 Carolina Ekombo</p>
     </footer>
 
