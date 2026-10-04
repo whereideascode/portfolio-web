@@ -22,21 +22,18 @@ export function createProjects() {
       <section
         id="projects"
         class="panel"
-        aria-labelledby="projects-title"
       >
         <div class="panel__content">
-          <h2 id="projects-title">Projects</h2>
-
             <article>
-                <h3>Tarot App</h3>
+                <h2>Tarot App</h2>
             </article>
 
             <article>
-                <h3>Portfolio</h3>
+                <h2>Portfolio</h2>
             </article>
 
             <article>
-            <h3>Training Work</h3>
+                <h2>Training Work</h2>
             </article>
         </div>
       </section>

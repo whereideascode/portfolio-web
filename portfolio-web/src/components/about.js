@@ -22,21 +22,18 @@ export function createAbout() {
       <section
         id="about"
         class="panel"
-        aria-labelledby="about-title"
       >
         <div class="panel__content">
-            <h2 id="about-title">About</h2>
-
             <section>
-                <h3>Who I am</h3>
+                <h2>Who I am</h2>
             </section>
 
             <section>
-                <h3>Education</h3>
+                <h2>Education</h2>
             </section>
 
             <section>
-                <h3>Tech stack</h3>
+                <h2>Tech stack</h2>
             </section>
         </div>
       </section>

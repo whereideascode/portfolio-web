@@ -22,17 +22,14 @@ export function createGoals() {
       <section
         id="goals"
         class="panel"
-        aria-labelledby="goals-title"
       >
         <div class="panel__content">
-            <h2 id="goals-title">Goals</h2>
-
             <section>
-                <h3>Career Direction</h3>
+                <h2>Career Direction</h2>
             </section>
 
             <section>
-                <h3>Opportunities</h3>
+                <h2>Opportunities</h2>
             </section>
          </div>
       </section>
