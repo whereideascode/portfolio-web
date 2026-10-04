@@ -13,6 +13,10 @@ import { createProjects } from "./components/projects.js";
 import { createGoals } from "./components/goals.js";
 import { createFooter } from "./components/footer.js";
 
+import { 
+    initSubnav, resetSubnav
+} from "./interactions/subnav.js";
+
 const app = document.querySelector("#app");
 
 app.innerHTML = `
@@ -27,6 +31,8 @@ app.innerHTML = `
   ${createFooter()}
 `;
 
+initSubnav();
+
 const navPanels = document.querySelectorAll(".nav-panel");
 const panels = document.querySelectorAll(".panel");
 
@@ -38,6 +44,7 @@ navPanels.forEach((button) => {
     const isOpen = button.getAttribute("aria-expanded") === "true";
 
     if (isOpen) {
+        resetSubnav(selectedPanel);
         closePanels();
         return;
     }
@@ -95,6 +102,7 @@ function switchPanel(selectedButton, selectedPanel, currentPanel) {
   currentPanel.classList.remove("panel--active");
 
   setTimeout(() => {
+    resetSubnav(currentPanel);
     openPanel(selectedButton, selectedPanel);
   }, 350);
 }

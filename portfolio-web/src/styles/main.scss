@@ -18,6 +18,7 @@
   --color-surface: #fafaf8;
   --color-text: #171717;
   --color-text-muted: #626262;
+  --color-strong: #111111;
   --color-interactive: #5965b8;
 
   // Section accents
@@ -32,6 +33,7 @@
     --color-surface: #181a1d;
     --color-text: #f1f1ed;
     --color-text-muted: #a5a6a8;
+    --color-strong: #ffffff;
     --color-interactive: #d0c7ff;
   }
 }
@@ -337,4 +339,42 @@ h3 {
 
 .subnav__content p + p {
   margin-top: 0.75rem;
+}
+
+.subnav__content strong {
+  color: var(--color-strong);
+  font-weight: 600;
+}
+
+.tech-stack {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, 280px), 1fr)
+  );
+
+  gap: 2rem;
+}
+
+.tech-stack__group {
+  padding-left: 1rem;
+
+  border-left: 2px solid var(--color-about);
+}
+
+.tech-stack__group h2 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+
+  font-size: 1.1rem;
+}
+
+.tech-stack__technologies {
+  margin-bottom: 1rem;
+
+  letter-spacing: var(--letter-spacing-readable);
+}
+
+#stack-content {
+  max-width: none;
 }
