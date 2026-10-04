@@ -315,7 +315,7 @@ h3 {
 
   height: 2px;
 
-  background-color: var(--color-about);
+  background-color: var(--accent);
 }
 
 .subnav__button:hover {
@@ -323,7 +323,7 @@ h3 {
 }
 
 .subnav__button:focus-visible {
-  outline: 2px solid var(--color-about);
+  outline: 2px solid var(--accent);
   outline-offset: 4px;
 }
 
@@ -359,7 +359,7 @@ h3 {
 .tech-stack__group {
   padding-left: 1rem;
 
-  border-left: 2px solid var(--color-about);
+  border-left: 2px solid var(--accent);
 }
 
 .tech-stack__group h2 {
@@ -377,4 +377,16 @@ h3 {
 
 #stack-content {
   max-width: none;
+}
+
+.portfolio-section--about {
+  --accent: var(--color-about);
+}
+
+.portfolio-section--projects {
+  --accent: var(--color-projects);
+}
+
+.portfolio-section--goals {
+  --accent: var(--color-goals);
 }

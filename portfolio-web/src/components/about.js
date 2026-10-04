@@ -1,6 +1,6 @@
 export function createAbout() {
   return `
-    <div class="portfolio-section">
+    <div class="portfolio-section portfolio-section--about">
       <button
         class="nav-panel nav-panel--about"
         type="button"
