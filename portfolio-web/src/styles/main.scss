@@ -97,13 +97,31 @@ h3 {
 }
 
 .panel {
-  display: none;
+  display: grid;
+  grid-template-rows: 0fr;
+
+  opacity: 0;
+
+  transition:
+    grid-template-rows 350ms ease,
+    opacity 200ms ease;
+}
+
+.panel__content {
+  min-height: 0;
+  overflow: hidden;
+
+  padding-block: 0;
+
+  transition: padding 350ms ease;
 }
 
 .panel--active {
-  display: block;
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
 
-  margin-inline: var(--page-padding);
+.panel--active .panel__content {
   padding-block: 2rem;
 }
 
@@ -146,6 +164,23 @@ h3 {
 
   text-align: left;
   cursor: pointer;
+
+  transition:
+    min-height 350ms ease,
+    padding 350ms ease,
+    box-shadow 250ms ease;
+}
+
+.nav-panel__heading {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.nav-panel--compact .nav-panel__heading {
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1rem;
 }
 
 .nav-panel--compact {
@@ -154,20 +189,21 @@ h3 {
 }
 
 .nav-panel--compact .nav-panel__number {
-  display: inline;
   margin-bottom: 0;
   margin-right: 1rem;
 }
 
 .nav-panel--compact .nav-panel__title {
-  display: inline;
   margin-bottom: 0;
 
   font-size: 1rem;
 }
 
 .nav-panel--compact .nav-panel__summary {
-  display: none;
+  max-height: 0;  
+  
+  opacity: 0;
+  transform: translateY(-4px);
 }
 
 .nav-panel--compact .nav-panel__indicator {
@@ -200,10 +236,21 @@ h3 {
 .nav-panel__summary {
   display: block;
 
+  max-height: 3rem;
+
   color: var(--color-text-muted);
 
   font-size: 1rem;
   font-weight: 400;
+
+  opacity: 1;
+
+  overflow: hidden;
+
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease,
+    max-height 300ms ease;
 }
 
 .nav-panel__indicator {

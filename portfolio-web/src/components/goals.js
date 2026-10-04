@@ -7,9 +7,10 @@ export function createGoals() {
         aria-controls="goals"
         aria-expanded="false"
       >
-        <span class="nav-panel__number">03</span>
-
-        <span class="nav-panel__title">Goals</span>
+        <span class="nav-panel__heading">
+            <span class="nav-panel__number">03</span>
+            <span class="nav-panel__title">Goals</span>
+        </span>
 
         <span class="nav-panel__summary">
           Career direction · Opportunities
@@ -23,15 +24,17 @@ export function createGoals() {
         class="panel"
         aria-labelledby="goals-title"
       >
-        <h2 id="goals-title">Goals</h2>
+        <div class="panel__content">
+            <h2 id="goals-title">Goals</h2>
 
-        <section>
-          <h3>Career Direction</h3>
-        </section>
+            <section>
+                <h3>Career Direction</h3>
+            </section>
 
-        <section>
-          <h3>Opportunities</h3>
-        </section>
+            <section>
+                <h3>Opportunities</h3>
+            </section>
+         </div>
       </section>
     </div>
   `;

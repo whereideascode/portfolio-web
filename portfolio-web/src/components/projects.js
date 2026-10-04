@@ -7,9 +7,10 @@ export function createProjects() {
         aria-controls="projects"
         aria-expanded="false"
       >
-        <span class="nav-panel__number">02</span>
-
-        <span class="nav-panel__title">Projects</span>
+        <span class="nav-panel__heading">
+            <span class="nav-panel__number">02</span>
+            <span class="nav-panel__title">Projects</span>
+        </span>
 
         <span class="nav-panel__summary">
           Tarot App · Portfolio · Training work
@@ -23,19 +24,21 @@ export function createProjects() {
         class="panel"
         aria-labelledby="projects-title"
       >
-        <h2 id="projects-title">Projects</h2>
+        <div class="panel__content">
+          <h2 id="projects-title">Projects</h2>
 
-        <article>
-          <h3>Tarot App</h3>
-        </article>
+            <article>
+                <h3>Tarot App</h3>
+            </article>
 
-        <article>
-          <h3>Portfolio</h3>
-        </article>
+            <article>
+                <h3>Portfolio</h3>
+            </article>
 
-        <article>
-          <h3>Training Work</h3>
-        </article>
+            <article>
+            <h3>Training Work</h3>
+            </article>
+        </div>
       </section>
     </div>
   `;
