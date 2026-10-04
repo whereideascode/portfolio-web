@@ -268,3 +268,73 @@ h3 {
   padding-inline: var(--page-padding);
   letter-spacing: var(--letter-spacing-readable);
 }
+
+.subnav {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 0.75rem 2rem;
+
+  margin-bottom: 2rem;
+}
+
+.subnav__button {
+  position: relative;
+
+  padding: 0.5rem 0;
+
+  border: 0;
+
+  background: transparent;
+  color: var(--color-text-muted);
+
+  font-family: var(--font-body);
+  font-weight: 500;
+  letter-spacing: var(--letter-spacing-readable);
+
+  cursor: pointer;
+
+  transition:
+    color 180ms ease,
+    opacity 180ms ease;
+}
+
+.subnav__button--active {
+  color: var(--color-text);
+}
+
+.subnav__button--active::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 2px;
+
+  background-color: var(--color-about);
+}
+
+.subnav__button:hover {
+  color: var(--color-text);
+}
+
+.subnav__button:focus-visible {
+  outline: 2px solid var(--color-about);
+  outline-offset: 4px;
+}
+
+.subnav__content {
+  max-width: 70ch;
+}
+
+.subnav__content p {
+  margin-block: 0;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+.subnav__content p + p {
+  margin-top: 0.75rem;
+}
