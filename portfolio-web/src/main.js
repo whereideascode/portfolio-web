@@ -12,10 +12,12 @@ import { createAbout } from "./components/about.js";
 import { createProjects } from "./components/projects.js";
 import { createGoals } from "./components/goals.js";
 import { createFooter } from "./components/footer.js";
+import { createScrollTop } from "./components/scrollTop.js";
 
 import { 
     initSubnav, resetSubnav
 } from "./interactions/subnav.js";
+import { initScrollTop } from "./interactions/scrollTop.js";
 
 const app = document.querySelector("#app");
 
@@ -29,9 +31,11 @@ app.innerHTML = `
   </main>
 
   ${createFooter()}
+  ${createScrollTop()}
 `;
 
 initSubnav();
+initScrollTop();
 
 const navPanels = document.querySelectorAll(".nav-panel");
 const panels = document.querySelectorAll(".panel");

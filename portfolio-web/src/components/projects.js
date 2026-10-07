@@ -206,9 +206,123 @@ export function createProjects() {
                 aria-labelledby="tab-portfolio"
                 hidden
             >
-                <p>
-                    Portfolio content.
-                </p>
+                <article class="project-detail">
+
+                    <header class="project-detail__header">
+                        <p class="project-detail__type">
+                            Personal developer portfolio
+                        </p>
+
+                        <p class="project-detail__status">
+                            In development
+                        </p>
+                    </header>
+
+                    <section class="project-detail__section">
+                        <h2>Overview</h2>
+
+                        <p>
+                            This portfolio is both a
+                            <strong>professional presentation and an ongoing development project</strong>.
+                            I am building it from scratch to present my work, learning process and
+                            professional direction while applying the same principles I want to
+                            develop in larger applications.
+                        </p>
+
+                        <p>
+                            Rather than starting from a predefined template, I use the project to
+                            explore how <strong>structure, interaction, typography and visual hierarchy</strong>
+                            can work together to create a clear and distinctive experience.
+                        </p>
+                    </section>
+
+                    <section class="project-detail__section">
+                        <h2>Design approach</h2>
+
+                        <p>
+                            The design has evolved through experimentation. Some early concepts
+                            introduced more complex visual interactions, but testing them helped me
+                            recognise when an idea was adding complexity without improving the
+                            experience.
+                        </p>
+
+                        <p>
+                            The current direction deliberately prioritises
+                            <strong>clarity, accessibility and purposeful interaction</strong>.
+                            The three main areas — About, Projects and Goals — act as the visual
+                            foundation of the interface, while secondary navigation keeps detailed
+                            information organised without overwhelming the page.
+                        </p>
+                    </section>
+
+                    <section class="project-detail__section">
+                        <h2>Technologies</h2>
+
+                        <p class="project-detail__technologies">
+                            <strong>
+                            HTML · Sass · JavaScript · Vite · Git · GitHub
+                            </strong>
+                        </p>
+
+                        <p>
+                            I chose to build the portfolio with
+                            <strong>vanilla JavaScript rather than a UI framework</strong>
+                            so that I can work directly with the document structure, browser APIs
+                            and interaction logic while strengthening my understanding of the
+                            fundamentals behind web interfaces.
+                        </p>
+                    </section>
+
+                    <section class="project-detail__section">
+                        <h2>Accessibility & UX</h2>
+
+                        <p>
+                            Accessibility and user experience are part of the design process rather
+                            than additions made at the end. The interface is designed to work with
+                            <strong>keyboard navigation, visible focus states and accessible tab behaviour</strong>,
+                            while responsive layouts allow the content to adapt to different
+                            available widths.
+                        </p>
+
+                        <p>
+                            The visual system also supports the user's preferred light or dark
+                            colour scheme, and typography, spacing and contrast are considered as
+                            functional parts of readability and navigation.
+                        </p>
+                    </section>
+
+                    <section class="project-detail__section">
+                        <h2>What I'm learning</h2>
+
+                        <p>
+                            Building the portfolio is teaching me that interface development is not
+                            simply about making individual elements look good. Decisions about
+                            structure, spacing, interaction and content affect one another and need
+                            to be considered as part of the same system.
+                        </p>
+
+                        <p>
+                            It has also become an exercise in
+                            <strong>iteration and technical decision-making</strong>:
+                            experimenting with ideas, identifying what does not work, simplifying
+                            when necessary and gradually turning those decisions into reusable
+                            components and patterns.
+                        </p>
+                    </section>
+
+                    <footer class="project-detail__links">
+                        <p>
+                            <strong>Source code</strong>
+                            <span>· GitHub</span>
+                        </p>
+
+                        <p>
+                            <strong>Live demo</strong>
+                            <span>· Coming soon</span>
+                        </p>
+                    </footer>
+
+                </article>
             </div>
 
 
