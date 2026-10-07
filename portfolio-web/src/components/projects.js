@@ -312,8 +312,15 @@ export function createProjects() {
 
                     <footer class="project-detail__links">
                         <p>
-                            <strong>Source code</strong>
-                            <span>· GitHub</span>
+                            <a
+                                class="project-detail__link"
+                                href="https://github.com/whereideascode/portfolio-web"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <strong>Source code</strong>
+                                <span>· GitHub ↗</span>
+                            </a>
                         </p>
 
                         <p>
