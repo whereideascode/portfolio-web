@@ -682,6 +682,43 @@ h3 {
   outline-offset: 4px;
 }
 
+// Goals
+
+#career-content,
+#opportunities-content {
+  max-width: none;
+}
+
+.goals-content {
+  max-width: 70ch;
+}
+
+.goals-content__intro {
+  max-width: 70ch;
+}
+
+.goals-content__eyebrow {
+  margin-bottom: 1rem;
+
+  color: var(--color-goals);
+
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  letter-spacing: var(--letter-spacing-readable);
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.goals-content__body {
+  max-width: 70ch;
+}
+
+.goals-content__body strong {
+  color: var(--color-strong);
+}
+
 .scroll-top {
   position: fixed;
   right: var(--page-padding);
