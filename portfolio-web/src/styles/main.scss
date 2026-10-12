@@ -23,9 +23,9 @@
   --color-interactive: #5965b8;
 
   // Section accents
-  --color-about: #8d7bd8;
-  --color-projects: #4faf9f;
-  --color-goals: #d39a52;
+  --color-about: #6f5bb7;
+  --color-projects: #287f72;
+  --color-goals: #9a681f;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -36,6 +36,10 @@
     --color-text-muted: #a5a6a8;
     --color-strong: #ffffff;
     --color-interactive: #d0c7ff;
+
+    --color-about: #a99be8;
+    --color-projects: #72c8b9;
+    --color-goals: #e1b06d;
   }
 }
 
