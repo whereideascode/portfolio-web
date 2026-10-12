@@ -2,6 +2,7 @@ export function initSubnav() {
   const tablists = document.querySelectorAll('[role="tablist"]');
 
   tablists.forEach((tablist) => {
+
     const buttons = Array.from(
       tablist.querySelectorAll('[role="tab"]')
     );
@@ -66,6 +67,21 @@ export function initSubnav() {
         newButton.focus();
         selectTab(newButton);
       });
+    });
+
+    const container = tablist.closest(".panel__content");
+    const projectLinks = container?.querySelectorAll("[data-project-tab]");
+
+    projectLinks?.forEach((link) => {
+        link.addEventListener("click", () => {
+            const targetTabId = link.dataset.projectTab;
+            const targetTab = document.getElementById(targetTabId);
+
+            if (!targetTab || !buttons.includes(targetTab)) return;
+
+            selectTab(targetTab);
+            targetTab.focus();
+        });
     });
   });
 }

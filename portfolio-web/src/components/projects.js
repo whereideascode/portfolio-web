@@ -13,7 +13,7 @@ export function createProjects() {
         </span>
 
         <span class="nav-panel__summary">
-          Tarot App · Portfolio · Training work
+          Overview · Portfolio · Tarot App
         </span>
 
         <span class="nav-panel__indicator" aria-hidden="true">+</span>
@@ -30,15 +30,15 @@ export function createProjects() {
                 aria-label="Projects"
             >
                 <button
-                    id="tab-tarot"
+                    id="tab-overview"
                     class="subnav__button subnav__button--active"
                     type="button"
                     role="tab"
                     aria-selected="true"
-                    aria-controls="tarot-content"
-                    data-subnav="tarot-content"
+                    aria-controls="overview-content"
+                    data-subnav="overview-content"
                 >
-                    Tarot App
+                    Overview
                 </button>
 
                 <button
@@ -55,25 +55,27 @@ export function createProjects() {
                 </button>
 
                 <button
-                    id="tab-training"
+                    id="tab-tarot"
                     class="subnav__button"
                     type="button"
                     role="tab"
                     aria-selected="false"
-                    aria-controls="training-content"
-                    data-subnav="training-content"
+                    aria-controls="tarot-content"
+                    data-subnav="tarot-content"
                     tabindex="-1"
+
                 >
-                    Training Work
+                    Tarot App
                 </button>
             </div>
 
 
             <div
                 id="tarot-content"
-                class="subnav__content subnav__content--active"
+                class="subnav__content"
                 role="tabpanel"
                 aria-labelledby="tab-tarot"
+                hidden
             >
                 <article class="project-detail">
 
@@ -334,15 +336,91 @@ export function createProjects() {
 
 
             <div
-                id="training-content"
-                class="subnav__content"
+                id="overview-content"
+                class="subnav__content subnav__content--active"
                 role="tabpanel"
-                aria-labelledby="tab-training"
-                hidden
+                aria-labelledby="tab-overview"
             >
-                <p>
-                    Training Work content.
-                </p>
+                <div class="projects-overview">
+
+                    <header class="projects-overview__header">
+                        <p class="projects-overview__eyebrow">
+                            Selected work
+                        </p>
+
+                        <p>
+                            A growing collection of personal projects and future collaborations
+                            developed as part of my learning and professional journey.
+                        </p>
+                    </header>
+
+                    <article class="project-preview">
+                        <span class="project-preview__number" aria-hidden="true">01</span>
+
+                        <div class="project-preview__content">
+                            <h2>Portfolio</h2>
+
+                            <p class="project-preview__type">
+                                Personal developer portfolio
+                            </p>
+
+                            <p>
+                                Designed and developed from scratch to present my work while
+                                exploring <strong>accessible interaction, responsive design
+                                and interface architecture</strong>.
+                            </p>
+
+                            <button
+                                class="project-preview__link"
+                                type="button"
+                                data-project-tab="tab-portfolio"
+                            >
+                                View project <span aria-hidden="true">→</span>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="project-preview">
+                        <span class="project-preview__number" aria-hidden="true">02</span>
+
+                        <div class="project-preview__content">
+                            <h2>TarotizaVirtual</h2>
+
+                            <p class="project-preview__type">
+                                Interactive tarot web application
+                            </p>
+
+                            <p>
+                                An evolving application that combines user interaction,
+                                application logic and structured data to create
+                                <strong>context-based tarot reading experiences</strong>.
+                            </p>
+
+                            <button
+                                class="project-preview__link"
+                                type="button"
+                                data-project-tab="tab-tarot"
+                            >
+                                View project <span aria-hidden="true">→</span>
+                            </button>
+                        </div>
+                    </article>
+
+                    <section class="projects-overview__collaborations">
+                        <p class="projects-overview__eyebrow">
+                            Collaborations
+                        </p>
+
+                        <p>
+                            This space will grow with selected collaborative work and projects
+                            developed with other people.
+                        </p>
+
+                        <p class="projects-overview__coming-soon">
+                            Coming soon
+                        </p>
+                    </section>
+                </div>
             </div>
         </div>
       </section>
