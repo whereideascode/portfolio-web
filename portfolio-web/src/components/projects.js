@@ -216,7 +216,7 @@ export function createProjects() {
                         </p>
 
                         <p class="project-detail__status">
-                            In development
+                            Live · Evolving
                         </p>
                     </header>
 
@@ -326,8 +326,15 @@ export function createProjects() {
                         </p>
 
                         <p>
-                            <strong>Live demo</strong>
-                            <span>· Coming soon</span>
+                            <a
+                                class="project-detail__link"
+                                href="https://whereideascode.github.io/portfolio-web/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <strong>Live website</strong>
+                                <span>· View site ↗</span>
+                            </a>
                         </p>
                     </footer>
 
