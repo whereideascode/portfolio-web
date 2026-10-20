@@ -1,3 +1,7 @@
+@use "cookie-consent";
+
+@use "privacy-policy";
+
 *,
 *::before,
 *::after {
@@ -274,6 +278,41 @@ h3 {
 .site-footer {
   padding-inline: var(--page-padding);
   letter-spacing: var(--letter-spacing-readable);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+
+  margin-top: 0.3rem;
+  padding: 1rem 0;
+
+  p {
+    margin: 0;
+  }
+
+  &__privacy {
+    background: none;
+    border: none;
+    padding: 0;
+    color: inherit;
+    font: inherit;
+    font-size: 0.85rem;
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+
+    &:hover {
+      color: #74c69d;
+    }
+
+    &:focus-visible {
+      outline: 2px solid #74c69d;
+      outline-offset: 4px;
+    }
+  }
+
 }
 
 .subnav {

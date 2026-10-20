@@ -19,6 +19,16 @@ import {
 } from "./interactions/subnav.js";
 import { initScrollTop } from "./interactions/scrollTop.js";
 
+import { createCookieConsent } from "./components/cookieConsent.js";
+
+import { initAnalytics } from "./analytics/analytics.js";
+
+import { initCookieConsent } from "./interactions/cookieConsent.js";
+
+import { createPrivacyPolicy } from "./components/privacyPolicy.js";
+
+import { initPrivacyPolicy } from "./interactions/privacyPolicy.js";
+
 const app = document.querySelector("#app");
 
 app.innerHTML = `
@@ -31,11 +41,18 @@ app.innerHTML = `
   </main>
 
   ${createFooter()}
+  ${createPrivacyPolicy()}
   ${createScrollTop()}
+  ${createCookieConsent()}
 `;
 
 initSubnav();
 initScrollTop();
+
+initAnalytics();
+initCookieConsent();
+
+initPrivacyPolicy();
 
 const navPanels = document.querySelectorAll(".nav-panel");
 const panels = document.querySelectorAll(".panel");
